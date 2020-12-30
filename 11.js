@@ -68,4 +68,4 @@ grid.forEach( (element, index, elements) => {
         }
 });
 
-    console.log(`Het hoogste producrt van de adjecent lengte ${adjacent} is ${result}`);
+console.log(`Het hoogste product van de adjecent lengte ${adjacent} is ${result}`);
