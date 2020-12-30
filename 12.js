@@ -12,7 +12,7 @@ while(!finished) {
             divisionCounter++;
         }
     }
-    if(divisionCounter === divisions) {
+    if(divisionCounter > divisions) {
         console.log(`The first by ${divisions} times divisible triangular number is ${triangleNumber}`);
         finished = true;
     } else {
