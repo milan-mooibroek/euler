@@ -1,8 +1,4 @@
-const powerSum = BigInt(Math.pow(2, 1000)).toString();
+const powerSum = BigInt(Math.pow(2, 1000));
 let summedTotal = 0;
 
-for (let i = 0; i <= (powerSum.length - 1); i++) {
-    summedTotal += parseInt(powerSum.charAt(i));
-}
-
-console.log(`the summerd op total is ${summedTotal}.`);
+console.log(`the summerd op total is ${String(powerSum).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0)}`);
