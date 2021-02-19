@@ -1,8 +1,18 @@
-const gridSize = 2;
-//hard
-exports.paths = (size) => {
-    return   Math.pow(size, size)*4/2;
+const gridsize = 20;
+const directions = 2;
+const corners = 4;
+const grid = gridsize*gridsize;
+const gridTravelPath = gridsize*directions;
+let dividerBase = 1;
+
+const combinations = [...Array(gridTravelPath).keys()].reduce((combinations, key) => {
+    const number = (key+1);
+    combinations *= number;
+    return combinations;
+}, 1);
+
+for (let i = 1; i < gridTravelPath / directions + 1; i++) {
+    dividerBase *= i
 }
 
-const paths = exports.paths(gridSize);
-console.log(paths);
+console.log(`The amount of paths in a ${gridsize}X${gridsize} is ${combinations / (dividerBase * dividerBase)}`);
