@@ -1,7 +1,5 @@
 const gridsize = 20;
 const directions = 2;
-const corners = 4;
-const grid = gridsize*gridsize;
 const gridTravelPath = gridsize*directions;
 let dividerBase = 1;
 
